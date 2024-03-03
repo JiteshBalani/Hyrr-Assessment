@@ -4,7 +4,7 @@ import Login from './Login'
 
 const Signup = () => {
   return (
-    <div className='flex justify-around items-center sm:w-screen'>
+    <div className='flex justify-center items-center pt-10'>
     <InputForm/>
     </div>
   )

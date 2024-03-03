@@ -1,25 +1,54 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
 
-const Navbar = () => {
-    return (
-        <div className='text-2xl shadow-sm shadow-purple-500 p-5 mb-20 flex items-center justify-between'>
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import BottomNavigation from '@mui/material/BottomNavigation';
+import BottomNavigationAction from '@mui/material/BottomNavigationAction';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import AppRegistrationOutlinedIcon from '@mui/icons-material/AppRegistrationOutlined';
+import LoginOutlinedIcon from '@mui/icons-material/LoginOutlined';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import { useNavigate } from 'react-router-dom';
 
-            <Link to='/'><h1 className='text-purple-500 font-bold'>Hyrr <span className='sm:hidden'>Assignment</span></h1></Link>
+export default function SimpleBottomNavigation() {
+  const [value, setValue] = React.useState(0);
 
-            <div className='text-lg flex items-center space-x-2 text-gray-400 font-semibold'>
+  const navigate = useNavigate();
 
-                <Link to='/'><div className='cursor-pointer'>Home</div></Link>
-                <Link to='/signup'><div className='border-[1px] p-1 rounded-lg font-semibold bg-transparent cursor-pointer'>Register</div></Link>
-                <Link to='/login'><div className='bg-white text-purple-500 p-1 font-semibold rounded-lg cursor-pointer'>Login</div></Link>
+  React.useEffect(() => {
+    navigate('/');
+  }, [navigate]);
 
-                <img src='https://cotton123236.github.io/CottonJS/dist/img/github-white.png' className='w-7 h-7'></img>
-                <a href='https://github.com/JiteshBalani/Hyrr-Assessment' target='blank'><span>See the code↗</span></a>
-
-            </div>
-
-        </div>
-    )
+  return (
+    <Box sx={{ width: 'stretch'  }} className='bottom-0 fixed'>
+      <BottomNavigation
+        showLabels
+        value={value}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+          switch (newValue) {
+            case 0:
+              navigate('/');
+              break;
+            case 1:
+                navigate('/signup');
+              break;
+            case 2:
+                navigate('/login');
+              break;
+            default:
+              break;
+          }
+        }}
+      >
+        <BottomNavigationAction label="Home" icon={<HomeOutlinedIcon />} />
+        <BottomNavigationAction label="Register" icon={<AppRegistrationOutlinedIcon />} />
+        <BottomNavigationAction label="Login" icon={<LoginOutlinedIcon />} />
+        <a href='https://github.com/JiteshBalani/Hyrr-Assessment' target='blank' className='flex flex-col justify-center items-center mx-5'>
+        <GitHubIcon sx={{color: 'black'}}/>
+        <span className='text-gray-500 text-xs'>Source Code</span>
+        </a> 
+      </BottomNavigation>
+    </Box>
+  );
 }
-
-export default Navbar
+          

@@ -13,7 +13,7 @@ const Login = () => {
     }
 
     return (
-        <div className='flex justify-around items-center'>
+        <div className='flex justify-around items-center pt-10'>
 
             <div className='flex flex-col space-y-2 border-2 rounded-md w-fit p-3 bg-white'>
                 <label className='text-purple-500 text-2xl'>Username:</label>
@@ -30,10 +30,10 @@ const Login = () => {
                     value={password}
                     onChange={savePassword} />
 
-                <div className='flex space-x-1 items-center'>
+                {/* <div className='flex space-x-1 items-center'>
                     <input type='checkbox' />
                     <span className='text-blue-500'>Remember me</span>
-                </div>
+                </div> */}
 
                 <button className='rounded-md p-2 text-xl bg-purple-500 w-full'>LOGIN</button>
             </div>
