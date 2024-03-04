@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import GoogleIcon from '@mui/icons-material/Google';
 
 const InputForm = () => {
 
@@ -55,7 +56,12 @@ const InputForm = () => {
                 <span className='text-black'>I accept all the <a className='text-blue-600'>Terms and Conditions</a></span>
             </div>
 
-            <button className='rounded-md p-2 text-xl bg-purple-500 w-full'>SIGNUP</button>
+            <button className='rounded-md p-2 text-xl bg-purple-500 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 w-full'>SIGNUP</button>
+
+            <button className='rounded-md p-2 text-xl text-black w-full flex items-center justify-center border-2 border-purple-500 space-x-2'>
+            <GoogleIcon style={{backgroundColor:'lightgrey', borderRadius: 30, padding: 2, fontSize: 30}}/>
+                <span>Signup with Google</span>
+            </button>
         </div>
     )
 }

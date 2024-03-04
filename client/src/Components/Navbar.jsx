@@ -30,9 +30,6 @@ export default function SimpleBottomNavigation() {
               navigate('/');
               break;
             case 1:
-                navigate('/signup');
-              break;
-            case 2:
                 navigate('/login');
               break;
             default:
@@ -41,10 +38,9 @@ export default function SimpleBottomNavigation() {
         }}
       >
         <BottomNavigationAction label="Home" icon={<HomeOutlinedIcon />} />
-        <BottomNavigationAction label="Register" icon={<AppRegistrationOutlinedIcon />} />
         <BottomNavigationAction label="Login" icon={<LoginOutlinedIcon />} />
-        <a href='https://github.com/JiteshBalani/Hyrr-Assessment' target='blank' className='flex flex-col justify-center items-center mx-5'>
-        <GitHubIcon sx={{color: 'black'}}/>
+        <a href='https://github.com/JiteshBalani/Hyrr-Assessment' target='blank' className='flex flex-col justify-center items-center px-5 space-y-[2px] mx-2'>
+        <GitHubIcon sx={{color: 'black', height: 25}}/>
         <span className='text-gray-500 text-xs'>Source Code</span>
         </a> 
       </BottomNavigation>

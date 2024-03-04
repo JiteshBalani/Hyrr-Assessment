@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import {Link} from 'react-router-dom'
+import GoogleIcon from '@mui/icons-material/Google';
 
 const Login = () => {
 
@@ -34,8 +36,13 @@ const Login = () => {
                     <input type='checkbox' />
                     <span className='text-blue-500'>Remember me</span>
                 </div> */}
-
-                <button className='rounded-md p-2 text-xl bg-purple-500 w-full'>LOGIN</button>
+                <span className='font-semibold text-amber-800 italic cursor-pointer'>Forgot Password ?</span>
+                <button className='rounded-md p-2 text-xl bg-purple-500 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 w-full'>LOGIN</button>
+                <button className='rounded-md p-2 text-xl text-black w-full flex items-center justify-center border-2 border-purple-500 space-x-2'>
+                <GoogleIcon style={{backgroundColor:'lightgrey', borderRadius: 30, padding: 2, fontSize: 30}}/>
+                <span>Signup with Google</span>
+            </button>
+                <Link to='/signup' className='text-center'><span className=' text-purple-500 cursor-pointer font-semibold'>New User? Register here</span></Link>
             </div>
         </div>
     )
