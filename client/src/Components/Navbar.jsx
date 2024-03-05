@@ -19,9 +19,9 @@ export default function SimpleBottomNavigation() {
   }, [navigate]);
 
   return (
-    <Box sx={{ width: 'stretch'}} className='bottom-0 fixed'>
+    <Box  className='top-0 fixed w-full'>
       <BottomNavigation
-      sx={{backgroundColor: 'black'}}
+      sx={{backgroundColor: '#F0F3FF', borderBottom: 4, borderColor: '#15F5BA'}}
         showLabels
         value={value}
         onChange={(event, newValue) => {
@@ -38,8 +38,8 @@ export default function SimpleBottomNavigation() {
           }
         }}
       >
-        <BottomNavigationAction sx={{color: 'white'}} label="Home" icon={<HomeOutlinedIcon />} />
-        <BottomNavigationAction sx={{color: 'white'}} label="Login" icon={<LoginOutlinedIcon />} />
+        <BottomNavigationAction sx={{color: 'black'}} label="HOME" icon={<HomeOutlinedIcon />} />
+        <BottomNavigationAction sx={{color: 'black'}} label="LOGIN" icon={<LoginOutlinedIcon />} />
          
       </BottomNavigation>
     </Box>

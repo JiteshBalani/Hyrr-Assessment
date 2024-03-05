@@ -1,6 +1,4 @@
-import React from 'react'
 import axios from 'axios'
-import { newsData } from '../utils/env.js'
 import { useEffect, useState } from 'react'
 
 const NewsCard = () => {
@@ -17,17 +15,17 @@ const NewsCard = () => {
     }, [])
 
     return (
-        <div className='flex-col justify-center items-center space-y-5 md:px-[35%] sm:w-full mb-20'>
+        <div className='flex-col justify-center items-center space-y-5 md:px-[35%] sm:w-full mt-16'>
             {newsArticles.map((article, index) => (
                 <div key={index}
-                    className='flex-col border-2 border-dashed border-green-700 bg-green-100 text-black space-y-2 p-5 rounded-lg '
+                    className='flex-col border-2 border-dashed border-[#211951] bg-[#836FFF] text-[#211951] space-y-2 p-5 rounded-lg '
                 >
-                    <img src={article?.urlToImage} alt={article?.title} className='border-2 border-green-500 border-dashed rounded-md' />
+                    <img src={article?.urlToImage} alt={article?.title} className='border-2 border-[#211951] border-dashed rounded-md' />
                     <div>Article By: <span className='font-semibold'>{article?.author}</span></div>
-                    <div className='text-2xl font-semibold'>{article?.title}</div>
+                    <div className='text-2xl text-[#211951] font-bold'>{article?.title}</div>
                     <div className='text-lg'>{article?.description}</div>
-                    <div className='font-semibold text-lg'>Published on: <span className='text-gray-500'>{article?.publishedAt.split('T')[0]}</span></div>
-                    <a href={article?.url} target='blank' className='flex w-full p-3 px-6 font-semibold border-2 border-dotted bg-transparent border-green-700 justify-between rounded-md'>
+                    <div className='font-semibold text-lg'>Published on: <span className='text-[#15F5BA]'>{article?.publishedAt.split('T')[0]}</span></div>
+                    <a href={article?.url} target='blank' className='flex w-full p-3 px-2 font-semibold border-2 border-x-1 border-dashed bg-[#836FFF] text-[#211951] border-[#F0F3FF] justify-between rounded-md'>
                         <button>Read full article</button>
                         <span>🔗</span>
                     </a>

@@ -8,7 +8,7 @@ import Header from "./Components/Header"
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
     children: [
       {
         path: "/",
@@ -24,7 +24,7 @@ export const router = createBrowserRouter([
       },
     ],
   },
-  
+
 
 ])
 
@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div className=' bg-black text-white h-full sm:px-0'>
-    <Header/>
+      <Header />
       <Outlet />
       <Navbar />
     </div>
