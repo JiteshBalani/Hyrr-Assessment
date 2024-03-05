@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState } from 'react'
 import GoogleIcon from '@mui/icons-material/Google';
 
@@ -24,31 +23,30 @@ const InputForm = () => {
     }
 
     return (
-        <div className='flex flex-col space-y-2 border-2 rounded-md w-fit p-3 bg-white'>
-            <label className='text-purple-500 text-2xl'>Username:</label>
+        <div className='flex flex-col space-y-2 border-2 border-dotted border-green-700 rounded-md w-fit p-3 bg-white'>
+            <label className='text-green-500 text-2xl'>Username:</label>
             <input className='p-2 bg-transparent border-[1px] rounded-md'
                 type="text"
                 placeholder='Type your email'
                 value={username}
                 onChange={saveUsername} />
-            <label className='text-purple-500 text-2xl'>Password:</label>
+            <label className='text-green-500 text-2xl'>Password:</label>
             <input className='p-2 bg-transparent border-[1px] rounded-md'
                 type="password"
                 placeholder='Set a strong password'
                 value={password}
                 onChange={savePassword} />
-            <label className='text-purple-500 text-2xl'>Name:</label>
+            <label className='text-green-500 text-2xl'>Name:</label>
             <input className='p-2 bg-transparent border-[1px] rounded-md'
                 type="text"
                 placeholder='Firstname Lastname'
                 value={name}
                 onChange={saveName} />
-            <label className='text-purple-500 text-2xl'>Profile Picture:</label>
+            <label className='text-green-500 text-2xl'>Profile Picture:</label>
             <input className='p-2 bg-transparent border-[1px] rounded-md text-black'
                 type="file"
                 accept='image/*'
                 title='Click here to add your Avatar'
-                placeholder='Firstname Lastname'
                 src={profilePicture}
                 onChange={saveProfilePicture} />
             <div className='flex space-x-1 items-center'>
@@ -56,10 +54,10 @@ const InputForm = () => {
                 <span className='text-black'>I accept all the <a className='text-blue-600'>Terms and Conditions</a></span>
             </div>
 
-            <button className='rounded-md p-2 text-xl bg-purple-500 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 w-full'>SIGNUP</button>
+            <button className='rounded-md p-2 text-xl bg-green-300 w-full text-black'>SIGNUP</button>
 
-            <button className='rounded-md p-2 text-xl text-black w-full flex items-center justify-center border-2 border-purple-500 space-x-2'>
-            <GoogleIcon style={{backgroundColor:'lightgrey', borderRadius: 30, padding: 2, fontSize: 30}}/>
+            <button className='rounded-md p-2 text-xl text-black w-full flex items-center justify-center border-2 border-green-700 space-x-2'>
+            <GoogleIcon style={{backgroundColor:'lightgrey',color: 'blue', borderRadius: 30, padding: 2, fontSize: 30}}/>
                 <span>Signup with Google</span>
             </button>
         </div>

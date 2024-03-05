@@ -3,6 +3,7 @@ import Navbar from "./Components/Navbar"
 import Login from "./Pages/Login"
 import Signup from "./Pages/Signup"
 import Homepage from "./Pages/Homepage"
+import Header from "./Components/Header"
 
 export const router = createBrowserRouter([
   {
@@ -30,9 +31,10 @@ export const router = createBrowserRouter([
 function App() {
 
   return (
-    <div className=' bg-black text-white h-screen sm:px-0'>
-      <Navbar />
+    <div className=' bg-black text-white h-[100%] sm:px-0'>
+    <Header/>
       <Outlet />
+      <Navbar />
     </div>
   )
 }
