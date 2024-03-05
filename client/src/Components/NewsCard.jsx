@@ -8,7 +8,7 @@ const NewsCard = () => {
     const [newsArticles, setNewsArticles] = useState([]);
 
     const fetchData = async () => {
-        const response = await axios.get('http://localhost:3000/newsData');
+        const response = await axios.get('https://artikle-cors.onrender.com/newsData');
         setNewsArticles(response.data.articles);
         console.log(response.data.articles);
     }
