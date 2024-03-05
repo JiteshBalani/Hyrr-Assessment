@@ -10,7 +10,7 @@ export default function MenuAppBar() {
     return (
         <Box sx={{ flexGrow: 1}}>
 
-            <AppBar position="static" sx={{ backgroundColor: '#F0F3FF', color: 'white', bottom: 0, position: 'fixed', borderTop: 4, borderColor: '#15F5BA' }}>
+            <AppBar position="static" sx={{ backgroundColor: '#F0F3FF',  bottom: 0, position: 'fixed', borderTop: 4, borderColor: '#15F5BA', width: '100vw' }}>
                 <Toolbar>
 
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: 'black' }}>

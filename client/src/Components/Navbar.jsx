@@ -4,9 +4,7 @@ import Box from '@mui/material/Box';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import AppRegistrationOutlinedIcon from '@mui/icons-material/AppRegistrationOutlined';
 import LoginOutlinedIcon from '@mui/icons-material/LoginOutlined';
-import GitHubIcon from '@mui/icons-material/GitHub';
 import { useNavigate } from 'react-router-dom';
 
 export default function SimpleBottomNavigation() {
@@ -19,7 +17,7 @@ export default function SimpleBottomNavigation() {
   }, [navigate]);
 
   return (
-    <Box  className='top-0 fixed w-full'>
+    <Box  className='top-0 fixed w-screen'>
       <BottomNavigation
       sx={{backgroundColor: '#F0F3FF', borderBottom: 4, borderColor: '#15F5BA'}}
         showLabels

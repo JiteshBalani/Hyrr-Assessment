@@ -3,7 +3,7 @@ import Navbar from "./Components/Navbar"
 import Login from "./Pages/Login"
 import Signup from "./Pages/Signup"
 import Homepage from "./Pages/Homepage"
-import Header from "./Components/Header"
+import Header from "./Components/Footer"
 
 export const router = createBrowserRouter([
   {
