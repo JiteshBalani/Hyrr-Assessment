@@ -31,7 +31,7 @@ export const router = createBrowserRouter([
 function App() {
 
   return (
-    <div className=' bg-black text-white h-[100%] sm:px-0'>
+    <div className=' bg-black text-white h-full sm:px-0'>
     <Header/>
       <Outlet />
       <Navbar />

@@ -8,7 +8,7 @@ const NewsCard = () => {
     const [newsArticles, setNewsArticles] = useState([]);
 
     const fetchData = async () => {
-        const response = await axios.get(newsData);
+        const response = await axios.get('http://localhost:3000/newsData');
         setNewsArticles(response.data.articles);
         console.log(response.data.articles);
     }
@@ -17,12 +17,12 @@ const NewsCard = () => {
     }, [])
 
     return (
-        <div className='flex-col justify-center items-center space-y-5 md:px-[35%] sm:w-full'>
+        <div className='flex-col justify-center items-center space-y-5 md:px-[35%] sm:w-full mb-20'>
             {newsArticles.map((article, index) => (
                 <div key={index}
                     className='flex-col border-2 border-dashed border-green-700 bg-green-100 text-black space-y-2 p-5 rounded-lg '
                 >
-                    <img src={article?.urlToImage} alt={article?.title} />
+                    <img src={article?.urlToImage} alt={article?.title} className='border-2 border-green-500 border-dashed rounded-md' />
                     <div>Article By: <span className='font-semibold'>{article?.author}</span></div>
                     <div className='text-2xl font-semibold'>{article?.title}</div>
                     <div className='text-lg'>{article?.description}</div>
