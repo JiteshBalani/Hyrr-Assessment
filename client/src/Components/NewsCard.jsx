@@ -25,7 +25,7 @@ const NewsCard = () => {
                     <div className='text-2xl text-[#211951] font-bold'>{article?.title}</div>
                     <div className='text-lg'>{article?.description}</div>
                     <div className='font-semibold text-lg'>Published on: <span className='text-[#15F5BA]'>{article?.publishedAt.split('T')[0]}</span></div>
-                    <a href={article?.url} target='blank' className='flex w-full p-3 px-2 font-semibold border-2 border-x-1 border-dashed bg-[#836FFF] text-[#211951] border-[#F0F3FF] justify-between rounded-md'>
+                    <a href={article?.url} target='blank' className='flex w-full p-3 px-2 font-semibold border-2 border-x-1 bg-[#000000] text-[#15F5BA] border-[#F0F3FF] justify-between rounded-md'>
                         <button>Read full article</button>
                         <span>🔗</span>
                     </a>
