@@ -19,7 +19,7 @@ export default function SimpleBottomNavigation() {
   return (
     <Box  className='top-0 fixed w-screen'>
       <BottomNavigation
-      sx={{backgroundColor: '#F0F3FF', borderBottom: 4, borderColor: '#15F5BA'}}
+      sx={{backgroundColor: '#C0F9FC', borderBottom: 4, borderColor: '#15F5BA'}}
         showLabels
         value={value}
         onChange={(event, newValue) => {
