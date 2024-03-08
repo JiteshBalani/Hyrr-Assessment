@@ -19,7 +19,7 @@ export default function SimpleBottomNavigation() {
   return (
     <Box  className='top-0 fixed w-screen'>
       <BottomNavigation
-      sx={{backgroundColor: '#C0F9FC', borderBottom: 4, borderColor: '#15F5BA'}}
+      sx={{backgroundColor: '#1B1A17', borderBottom: 2, borderColor: '#15F5BA'}}
         showLabels
         value={value}
         onChange={(event, newValue) => {
@@ -36,8 +36,8 @@ export default function SimpleBottomNavigation() {
           }
         }}
       >
-        <BottomNavigationAction sx={{color: 'black'}} label="HOME" icon={<HomeOutlinedIcon />} />
-        <BottomNavigationAction sx={{color: 'black'}} label="LOGIN" icon={<LoginOutlinedIcon />} />
+        <BottomNavigationAction sx={{color: 'white'}} label="HOME" icon={<HomeOutlinedIcon />} />
+        <BottomNavigationAction sx={{color: 'white'}} label="LOGIN" icon={<LoginOutlinedIcon />} />
          
       </BottomNavigation>
     </Box>
