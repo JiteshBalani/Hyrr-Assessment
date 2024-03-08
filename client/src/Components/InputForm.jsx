@@ -23,7 +23,7 @@ const InputForm = () => {
     }
 
     return (
-        <div className='flex flex-col space-y-2 border-2 border-dotted border-green-700 rounded-md w-fit p-3 bg-white'>
+        <div className='flex flex-col space-y-2 border-2 border-dotted border-green-700 rounded-md w-fit p-3 bg-white '>
             <label className='text-green-500 text-2xl font-semibold'>Username:</label>
             <input className='p-2 bg-transparent border-[1px] rounded-md'
                 type="text"

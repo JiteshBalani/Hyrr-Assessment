@@ -15,7 +15,7 @@ const Login = () => {
     }
 
     return (
-        <div className='flex justify-center items-center h-[100vh] font-semibold bg-[#211951]'>
+        <div className='flex justify-center items-center h-[100vh] font-semibold bg-[#211951] inset-0 w-screen bg-[linear-gradient(to_right,black_1px,transparent_1px),linear-gradient(to_bottom,black_1px,transparent_1px)] bg-[size:8px_8px]'>
 
             <div className='flex flex-col space-y-2 border-2 border-green-700 border-dotted rounded-md w-fit p-3 bg-white'>
                 <label className='text-green-500 text-2xl'>Username:</label>
