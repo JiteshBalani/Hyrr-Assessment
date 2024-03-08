@@ -15,7 +15,7 @@ const NewsCard = () => {
     }, [])
 
     return (
-        <div className='flex-col justify-center items-center space-y-5 md:px-[35%] sm:w-full mt-16'>
+        <div className='flex-col justify-center items-center space-y-5 md:px-[35%] sm:w-full my-16'>
             {newsArticles.map((article, index) => (
                 <div key={index}
                     className='flex-col border-2 border-[#211951] bg-[#836FFF] text-[#211951] space-y-2 p-5 rounded-lg '
@@ -31,6 +31,8 @@ const NewsCard = () => {
                     </a>
                 </div>
             ))}
+            <h1 className='text-center text-[#15F5BA] border-2 border-[#836FFF] border-dotted font-semibold rounded-lg p-3 text-xl'>That's all for now. Come back later! :)</h1>
+
         </div>
     )
 }
