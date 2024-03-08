@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import Spinner from './Spinner'
 
 const NewsCard = () => {
 
@@ -14,6 +15,9 @@ const NewsCard = () => {
         fetchData()
     }, [])
 
+    if (newsArticles.length === 0) {
+        return <Spinner/>
+    }
     return (
         <div className='flex-col justify-center items-center space-y-5 md:px-[35%] sm:w-full my-16'>
             {newsArticles.map((article, index) => (
