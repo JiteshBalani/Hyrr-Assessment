@@ -8,7 +8,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 export default function MenuAppBar() {
 
     return (
-        <Box sx={{ flexGrow: 1}}>
+        <Box sx={{ flexGrow: 1, overflow: 'hidden' }}>
 
             <AppBar position="static" sx={{ backgroundColor: '#1B1A17',  bottom: 0, position: 'fixed', borderTop: 2, borderColor: '#15F5BA', width: '100vw' }}>
                 <Toolbar>

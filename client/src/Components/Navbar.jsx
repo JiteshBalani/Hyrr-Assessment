@@ -17,7 +17,7 @@ export default function SimpleBottomNavigation() {
   }, [navigate]);
 
   return (
-    <Box  className='top-0 fixed w-screen'>
+    <Box  className='top-0 fixed w-screen overflow-hidden'>
       <BottomNavigation
       sx={{backgroundColor: '#1B1A17', borderBottom: 2, borderColor: '#15F5BA'}}
         showLabels
